@@ -54,6 +54,7 @@ public class MainActivity extends AppCompatActivity {
 
     private boolean writerFlag = false;
 
+    //这里引入了阻塞队列LinkedBlockingQueue作为生产者线程和消费者线程的缓冲队列，避免了生产者线程和消费者线程同步造成的复杂操作。
     private LinkedBlockingQueue<String> msgs = new LinkedBlockingQueue<>();
 
     //定义一个handler对象,用来刷新界面
