@@ -7,6 +7,9 @@ import java.io.InputStreamReader;
 import java.net.ServerSocket;
 import java.net.Socket;
 
+/**
+ * 简单Socket通信的服务端
+ */
 public class SocketServer {
 
      public static void main(String ... args) throws IOException {

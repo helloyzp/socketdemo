@@ -17,6 +17,9 @@ import java.net.Socket;
 import java.net.UnknownHostException;
 import java.util.Arrays;
 
+/**
+ * 简单聊天室的客户端，新增了心跳包机制
+ */
 public class SocketService extends Service {
     private static final String TAG = "Zero";
     /**心跳频率*/
