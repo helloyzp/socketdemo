@@ -23,7 +23,7 @@ public class ChartServer {
 
     private ServerSocket server = null; //服务器的ServerSocket
     private static final int PORT = 10065;
-    private List<Socket> mClients = new ArrayList<>();
+    private List<Socket> mClients = new ArrayList<>();//保存所有的client
     private ExecutorService mExec = null;
 
      public static void main(String ... args){
