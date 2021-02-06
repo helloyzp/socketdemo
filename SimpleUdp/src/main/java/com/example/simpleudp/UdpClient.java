@@ -7,15 +7,20 @@ import java.net.InetAddress;
 import java.net.SocketException;
 import java.net.UnknownHostException;
 
+/**
+ * 简单的UDP通信的客户端
+ */
 public class UdpClient {
-     public static void main(String ... args) throws IOException {
-             String msg = "Hello sevice";
-          DatagramSocket datagramSocket = new DatagramSocket();
+    public static void main(String... args) throws IOException {
+        String msg = "Hello sevice";
 
-          //创建datagramPacket发送信息
-          DatagramPacket datagramPacket = new DatagramPacket(msg.getBytes(),msg.getBytes().length, InetAddress.getLocalHost(),12307);
+         // 创建DatagramSocket，指定一个端口，如果不指定端口，则系统会自动分配一个空闲端口
+        DatagramSocket datagramSocket = new DatagramSocket();
 
-          datagramSocket.send(datagramPacket);
+        //创建datagramPacket发送信息
+        DatagramPacket datagramPacket = new DatagramPacket(msg.getBytes(), msg.getBytes().length, InetAddress.getLocalHost(), 12307);
 
-     }
+        datagramSocket.send(datagramPacket);
+
+    }
 }
